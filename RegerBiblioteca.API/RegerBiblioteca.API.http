@@ -1,0 +1,6 @@
+@RegerBiblioteca.API_HostAddress = http://localhost:5261
+
+GET {{RegerBiblioteca.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
