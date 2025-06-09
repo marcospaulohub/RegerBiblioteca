@@ -1,4 +1,4 @@
-﻿namespace RegerBiblioteca.Core.ValueObjects
+﻿namespace RegerBiblioteca.Core.Enums
 {
     public enum TipoUsuario
     {

@@ -1,4 +1,5 @@
-﻿using RegerBiblioteca.Core.ValueObjects;
+﻿using RegerBiblioteca.Core.Enums;
+using RegerBiblioteca.Core.ValueObjects;
 
 namespace RegerBiblioteca.Core.Entities
 {

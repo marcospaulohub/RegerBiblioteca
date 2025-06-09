@@ -7,6 +7,7 @@ namespace RegerBiblioteca.Core.Entities
         private const int PERIODO_EMPRESTIMO = 14;
 
         public Emprestimo(int funcionarioId, int usuarioId, int exemplarId)
+            : base()
         {
             FuncionarioId = funcionarioId;
             UsuarioId = usuarioId;

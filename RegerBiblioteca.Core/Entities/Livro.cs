@@ -8,5 +8,6 @@
 
         public List<LivroAutor> Autores { get; set; } = [];
         public List<LivroCategoria> Categorias { get; set; } = [];
+        public List<Exemplar> Exemplares { get; set; } = [];
     }
 }
