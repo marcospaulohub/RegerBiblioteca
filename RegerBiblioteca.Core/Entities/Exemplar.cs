@@ -6,7 +6,7 @@ namespace RegerBiblioteca.Core.Entities
     {
         public int LivroId { get; set; }
         public Livro Livro { get; set; }
-        public string Codigo { get; set; }
+        public string CodigoBarras { get; set; }
         public string Localizacao { get; set; }
         public EstadoConservacao EstadoConservacao { get; set; }
     }
