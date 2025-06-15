@@ -8,7 +8,19 @@ namespace RegerBiblioteca.Infra.Persistence.Mappings
     {
         public void Configure(EntityTypeBuilder<Livro> builder)
         {
-            throw new NotImplementedException();
+            builder
+                .ToTable("Livro");
+
+            builder
+                .HasKey(l => l.Id);
+
+            builder
+                .Property(l => l.Titulo)
+                .HasColumnType("varchar(100)");
+
+            builder
+                .Property(l => l.ISBN)
+                .HasColumnType("varchar(50)");
         }
     }
 }

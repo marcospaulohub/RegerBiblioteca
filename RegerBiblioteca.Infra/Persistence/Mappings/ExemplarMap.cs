@@ -8,7 +8,19 @@ namespace RegerBiblioteca.Infra.Persistence.Mappings
     {
         public void Configure(EntityTypeBuilder<Exemplar> builder)
         {
-            throw new NotImplementedException();
+            builder
+               .ToTable("Exemplar");
+
+            builder
+                .HasKey(e => e.Id);
+
+            builder
+                .Property(e => e.CodigoBarras)
+                .HasColumnType("varchar(200)");
+
+            builder
+                .Property(e => e.Localizacao)
+                .HasColumnType("varchar(20)");
         }
     }
 }
