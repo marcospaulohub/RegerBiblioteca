@@ -1,4 +1,4 @@
-
+using RegerBiblioteca.Infra;
 namespace RegerBiblioteca.API
 {
     public class Program
@@ -8,6 +8,8 @@ namespace RegerBiblioteca.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services
+                .AddInfra(builder.Configuration);
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
