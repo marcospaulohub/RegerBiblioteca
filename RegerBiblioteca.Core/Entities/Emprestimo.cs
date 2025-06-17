@@ -6,8 +6,9 @@ namespace RegerBiblioteca.Core.Entities
     {
         private const int PERIODO_EMPRESTIMO = 14;
 
-        public Emprestimo(int funcionarioId, int usuarioId, int exemplarId)
-            : base()
+        public Emprestimo() { }
+
+        public Emprestimo(int funcionarioId, int usuarioId, int exemplarId) : base()
         {
             FuncionarioId = funcionarioId;
             UsuarioId = usuarioId;
@@ -18,15 +19,15 @@ namespace RegerBiblioteca.Core.Entities
         }
 
         public int FuncionarioId { get; set; }
-        public Funcionario Funcionario { get; set; }
+        public Funcionario? Funcionario { get; set; }
 
 
         public int UsuarioId { get; set; }
-        public Usuario Usuario { get; set; }
+        public Usuario? Usuario { get; set; }
         
 
         public int ExemplarId { get; set; }
-        public Exemplar Exemplar { get; set; }
+        public Exemplar? Exemplar { get; set; }
 
 
         public DateTime DataEmprestimo { get; set; }

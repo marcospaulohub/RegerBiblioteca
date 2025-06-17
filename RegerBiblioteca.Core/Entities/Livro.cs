@@ -2,6 +2,15 @@
 {
     public class Livro : BaseEntity
     {
+        public Livro() { }
+
+        public Livro(string titulo, string iSBN, int anoPublicacao) : base()
+        {
+            Titulo = titulo;
+            ISBN = iSBN;
+            AnoPublicacao = anoPublicacao;
+        }
+
         public string Titulo { get; set; }
         public string ISBN { get; set; }
         public int AnoPublicacao { get; set; }
