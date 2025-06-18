@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RegerBiblioteca.Infra.Persistence.Mappings;
+using RegerBiblioteca.Infra.Persistence.Seed;
 
 namespace RegerBiblioteca.Infra.Persistence
 {
@@ -13,6 +14,8 @@ namespace RegerBiblioteca.Infra.Persistence
             base.OnModelCreating(builder);
 
             builder.Map(); // Aplicar os mapeamentos das entidades.
+
+            builder.Seed(); // Popular o banco de dados com dados iniciais.
         }
     }
 }
