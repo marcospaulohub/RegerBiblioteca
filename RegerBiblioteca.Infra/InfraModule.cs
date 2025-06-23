@@ -28,6 +28,7 @@ namespace RegerBiblioteca.Infra
         {
             services.AddScoped<IAutorRepository, AutorRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<IEmprestimoRepository, EmprestimoRepository>();
 
             return services;
         }
