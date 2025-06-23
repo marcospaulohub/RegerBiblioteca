@@ -30,6 +30,7 @@ namespace RegerBiblioteca.Infra
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddScoped<IEmprestimoRepository, EmprestimoRepository>();
             services.AddScoped<IExemplarRepository, ExemplarRepository>();
+            services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
 
             return services;
         }
