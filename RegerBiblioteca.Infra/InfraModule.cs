@@ -27,6 +27,7 @@ namespace RegerBiblioteca.Infra
         private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IAutorRepository, AutorRepository>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
             return services;
         }
