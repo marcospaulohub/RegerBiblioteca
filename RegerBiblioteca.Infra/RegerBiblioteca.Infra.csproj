@@ -16,10 +16,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\RegerBiblioteca.Core\RegerBiblioteca.Core.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Persistence\Repositories\" />
 	</ItemGroup>	
 
 </Project>

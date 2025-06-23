@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RegerBiblioteca.Core.Repositories;
 using RegerBiblioteca.Infra.Persistence;
+using RegerBiblioteca.Infra.Persistence.Repositories;
 
 namespace RegerBiblioteca.Infra
 {
@@ -24,7 +26,7 @@ namespace RegerBiblioteca.Infra
         }
         private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            //services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IAutorRepository, AutorRepository>();
 
             return services;
         }
