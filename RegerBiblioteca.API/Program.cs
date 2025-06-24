@@ -1,4 +1,5 @@
 using RegerBiblioteca.Infra;
+using RegerBiblioteca.App;
 namespace RegerBiblioteca.API
 {
     public class Program
@@ -9,6 +10,7 @@ namespace RegerBiblioteca.API
 
             // Add services to the container.
             builder.Services
+                .AddApplication()
                 .AddInfra(builder.Configuration);
 
             builder.Services.AddControllers();

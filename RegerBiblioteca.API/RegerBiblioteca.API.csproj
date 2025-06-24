@@ -17,8 +17,9 @@
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\RegerBiblioteca.Infra\RegerBiblioteca.Infra.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\RegerBiblioteca.App\RegerBiblioteca.App.csproj" />
+	  <ProjectReference Include="..\RegerBiblioteca.Core\RegerBiblioteca.Core.csproj" />
+	</ItemGroup>
 
 </Project>
