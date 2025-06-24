@@ -15,10 +15,4 @@
     <ProjectReference Include="..\RegerBiblioteca.Infra\RegerBiblioteca.Infra.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Validators\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
