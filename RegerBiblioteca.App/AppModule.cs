@@ -21,6 +21,7 @@ namespace RegerBiblioteca.App
         private static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<IAutorService, AutorService>();
+            services.AddScoped<ICategoriaService, CategoriaService>();
 
             return services;
         }
