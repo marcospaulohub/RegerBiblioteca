@@ -22,6 +22,7 @@ namespace RegerBiblioteca.App
         {
             services.AddScoped<IAutorService, AutorService>();
             services.AddScoped<ICategoriaService, CategoriaService>();
+            services.AddScoped<IEmprestimoService, EmprestimoService>();
 
             return services;
         }
