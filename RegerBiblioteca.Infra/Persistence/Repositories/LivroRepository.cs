@@ -1,4 +1,5 @@
-﻿using RegerBiblioteca.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using RegerBiblioteca.Core.Entities;
 using RegerBiblioteca.Core.Repositories;
 
 namespace RegerBiblioteca.Infra.Persistence.Repositories
@@ -39,6 +40,8 @@ namespace RegerBiblioteca.Infra.Persistence.Repositories
         {
             var livro = _context
                 .Livros
+                .Include(l => l.Autores)
+                    .ThenInclude(la => la.Autor)
                 .SingleOrDefault(l => l.Id == id && l.ExcluidoEm == null);
             
             return livro;
@@ -48,6 +51,8 @@ namespace RegerBiblioteca.Infra.Persistence.Repositories
         {
             var listaLivros = _context
                 .Livros
+                .Include(l => l.Autores)
+                    .ThenInclude(la => la.Autor)
                 .Where(l => l.ExcluidoEm == null)
                 .ToList();
 
