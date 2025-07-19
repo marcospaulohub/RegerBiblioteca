@@ -15,6 +15,7 @@ namespace RegerBiblioteca.Infra.Persistence.Mappings
             builder.ApplyConfiguration(new LivroCategoriaMap());
             builder.ApplyConfiguration(new LivroMap());
             builder.ApplyConfiguration(new UsuarioMap());
+            builder.ApplyConfiguration(new ReservaMap());
         }
     }
 }
