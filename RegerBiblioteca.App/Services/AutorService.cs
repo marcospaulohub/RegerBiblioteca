@@ -1,7 +1,8 @@
-﻿using RegerBiblioteca.App.Models.Autores;
-using RegerBiblioteca.App.Services.Interfaces;
-using RegerBiblioteca.Core.Entities;
+﻿using RegerBiblioteca.Core.Entities;
 using RegerBiblioteca.Core.Repositories;
+using RegerBiblioteca.Core.Services;
+using RegerBiblioteca.Core.ViewModels;
+using RegerBiblioteca.Core.ViewModels.Autores;
 
 namespace RegerBiblioteca.App.Services
 {

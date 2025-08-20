@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using RegerBiblioteca.App.Models.Autores;
+using RegerBiblioteca.Core.ViewModels.Autores;
 
 namespace RegerBiblioteca.App.Validators.Autores
 {

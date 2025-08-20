@@ -1,6 +1,7 @@
-﻿using RegerBiblioteca.App.Models.Reservas;
-using RegerBiblioteca.App.Services.Interfaces;
-using RegerBiblioteca.Core.Repositories;
+﻿using RegerBiblioteca.Core.Repositories;
+using RegerBiblioteca.Core.Services;
+using RegerBiblioteca.Core.ViewModels;
+using RegerBiblioteca.Core.ViewModels.Reservas;
 
 namespace RegerBiblioteca.App.Services
 {

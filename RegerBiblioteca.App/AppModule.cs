@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using RegerBiblioteca.Core.Services;
 using RegerBiblioteca.App.Services;
-using RegerBiblioteca.App.Services.Interfaces;
 using RegerBiblioteca.App.Validators.Autores;
 
 namespace RegerBiblioteca.App
