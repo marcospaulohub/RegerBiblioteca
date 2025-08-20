@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RegerBiblioteca.App.Models.Usuarios;
-using RegerBiblioteca.App.Services.Interfaces;
+using RegerBiblioteca.Core.Services;
+using RegerBiblioteca.Core.ViewModels.Usuarios;
 
 namespace RegerBiblioteca.API.Controllers
 {
