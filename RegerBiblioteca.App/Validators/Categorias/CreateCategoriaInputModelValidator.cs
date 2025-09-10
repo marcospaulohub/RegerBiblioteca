@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using RegerBiblioteca.Core.Messages.CategoriaMessages;
 using RegerBiblioteca.Core.ViewModels.Categorias;
 
 namespace RegerBiblioteca.App.Validators.Categorias
@@ -9,24 +10,24 @@ namespace RegerBiblioteca.App.Validators.Categorias
         {
             RuleFor(c => c.Nome)
                 .NotEmpty()
-                    .WithMessage("O nome da categoria é obrigatório.")
+                    .WithMessage(CategoriaMsgs.GetNomeNotEmpty())
                 .MaximumLength(200)
-                    .WithMessage("O nome da categoria deve ter no máximo 200 caracteres.");
+                    .WithMessage(CategoriaMsgs.GetNomeMaxLength());
 
             RuleFor(c => c.Descricao)
                 .MaximumLength(500)
-                    .WithMessage("A descrição da categoria deve ter no máximo 500 caracteres.")
+                    .WithMessage(CategoriaMsgs.GetDescricaoMaxLength())
                 .When(c => !string.IsNullOrEmpty(c.Descricao));
 
             RuleFor(c => c.Genero)
                 .IsInEnum()
-                    .WithMessage("O gênero da categoria deve ser um valor válido do enum Genero.");
+                    .WithMessage(CategoriaMsgs.GetGeneroInvalid());
             
             RuleFor(c => c.Ativo)
                 .NotNull()
-                    .WithMessage("O status ativo da categoria é obrigatório.")
+                    .WithMessage(CategoriaMsgs.GetAtivoNotNull())
                 .Must(status => status == true || status == false)
-                    .WithMessage("O status ativo deve ser verdadeiro ou falso.");
+                    .WithMessage(CategoriaMsgs.GetAtivoInvalid());
         }
     }
 }
