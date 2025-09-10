@@ -5,6 +5,13 @@ namespace RegerBiblioteca.Core.Messages
 {
     public static class BaseMsgs
     {
+        private const string language = "BR";
+
+        public static string GetLanguage()
+        {
+            return language;
+        }
+
         public static string GetResource(string key, string FileNameResx)
         {
             var rm = new ResourceManager(FileNameResx, typeof(BaseMsgs).Assembly);

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RegerBiblioteca.Core.Messages.AutorMessages {
+namespace RegerBiblioteca.Core.Messages.CategoriaMessages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace RegerBiblioteca.Core.Messages.AutorMessages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AutorMsgsResource {
+    internal class CategoriaMsgsResourceBR {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal AutorMsgsResource() {
+        internal CategoriaMsgsResourceBR() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace RegerBiblioteca.Core.Messages.AutorMessages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RegerBiblioteca.Core.Messages.AutorMessages.AutorMsgsResource", typeof(AutorMsgsResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RegerBiblioteca.Core.Messages.CategoriaMessages.CategoriaMsgsResourceBR", typeof(CategoriaMsgsResourceBR).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,34 +61,43 @@ namespace RegerBiblioteca.Core.Messages.AutorMessages {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a A foto do autor deve ter no máximo 200 caracteres..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O status ativo deve ser verdadeiro ou falso..
         /// </summary>
-        internal static string FotoUrlMaxLength {
+        internal static string AtivoInvalid {
             get {
-                return ResourceManager.GetString("FotoUrlMaxLength", resourceCulture);
+                return ResourceManager.GetString("AtivoInvalid", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a A nacionalidade do autor deve ter no máximo 100 caracteres..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O status ativo da categoria é obrigatório..
         /// </summary>
-        internal static string NacionalidadeMaxLength {
+        internal static string AtivoNotNull {
             get {
-                return ResourceManager.GetString("NacionalidadeMaxLength", resourceCulture);
+                return ResourceManager.GetString("AtivoNotNull", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a A data de nascimento não pode ser no futuro..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A descrição da categoria deve ter no máximo 500 caracteres..
         /// </summary>
-        internal static string NascimentoInvalid {
+        internal static string DescricaoMaxLength {
             get {
-                return ResourceManager.GetString("NascimentoInvalid", resourceCulture);
+                return ResourceManager.GetString("DescricaoMaxLength", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a O nome do autor deve ter no máximo 100 caracteres..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O gênero da categoria deve ser um valor válido do enum Genero..
+        /// </summary>
+        internal static string GeneroInvalid {
+            get {
+                return ResourceManager.GetString("GeneroInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O nome da categoria deve ter no máximo 200 caracteres..
         /// </summary>
         internal static string NomeMaxLength {
             get {
@@ -97,20 +106,11 @@ namespace RegerBiblioteca.Core.Messages.AutorMessages {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a O nome do autor é obrigatório..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O nome da categoria é obrigatório..
         /// </summary>
         internal static string NomeNotEmpty {
             get {
                 return ResourceManager.GetString("NomeNotEmpty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a A URL do site do autor deve ter no máximo 200 caracteres..
-        /// </summary>
-        internal static string SiteUrlMaxLength {
-            get {
-                return ResourceManager.GetString("SiteUrlMaxLength", resourceCulture);
             }
         }
     }

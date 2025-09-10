@@ -2,7 +2,7 @@
 {
     public static class CategoriaMsgs
     {
-        private const string fileNameResx = "RegerBiblioteca.Core.Messages.CategoriaMessages.CategoriaMsgsResource";
+        private static readonly string fileNameResx = $"RegerBiblioteca.Core.Messages.CategoriaMessages.CategoriaMsgsResource{BaseMsgs.GetLanguage()}";
 
         public static string GetNomeNotEmpty()
         {

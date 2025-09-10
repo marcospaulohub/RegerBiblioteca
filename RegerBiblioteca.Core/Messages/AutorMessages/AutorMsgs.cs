@@ -2,7 +2,7 @@
 {
     public static class AutorMsgs
     {
-        private const string fileNameResx = "RegerBiblioteca.Core.Messages.AutorMessages.AutorMsgsResource";
+        private static readonly string fileNameResx = $"RegerBiblioteca.Core.Messages.AutorMessages.AutorMsgsResource{BaseMsgs.GetLanguage()}";
 
         public static string GetNomeNotEmpty()
         {
