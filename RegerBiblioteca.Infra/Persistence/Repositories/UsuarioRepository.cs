@@ -1,5 +1,6 @@
 ﻿using RegerBiblioteca.Core.Entities;
 using RegerBiblioteca.Core.Repositories;
+using RegerBiblioteca.Core.ValueObjects;
 
 namespace RegerBiblioteca.Infra.Persistence.Repositories
 {
@@ -52,6 +53,15 @@ namespace RegerBiblioteca.Infra.Persistence.Repositories
                 .ToList();
 
             return listaUsuarios;
+        }
+
+        public Usuario GetByEmail(string email)
+        {
+            var usuario = _context
+                .Usuarios
+                .SingleOrDefault(u => u.Email == Email.Criar(email) && u.ExcluidoEm == null);
+
+            return usuario;
         }
     }
 }
