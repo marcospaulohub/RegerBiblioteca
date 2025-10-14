@@ -1,4 +1,7 @@
-﻿namespace RegerBiblioteca.Core.ValueObjects
+﻿using System.Security.Cryptography;
+using System.Text;
+
+namespace RegerBiblioteca.Core.ValueObjects
 {
     public sealed class Senha : ValueObject
     {
@@ -28,7 +31,12 @@
 
         public bool Verificar(string outroValor)
         {
-            return Valor == outroValor;
+            var hashOutroValor = ComputeHash(outroValor);
+
+            if(hashOutroValor != Valor)
+                return false;
+
+            return true;
         }
 
         protected override IEnumerable<object?> GetEqualityComponents()
@@ -39,6 +47,25 @@
         public override string ToString()
         {
             return "****"; // Evita exposição acidental da senha
+        }
+
+        public static string ComputeHash(string senha)
+        {
+            using (var hash = SHA256.Create())
+            {
+                var senhaEmBytes = Encoding.UTF8.GetBytes(senha);
+
+                var hasBytes = hash.ComputeHash(senhaEmBytes);
+
+                var builder = new StringBuilder();
+
+                for (var i = 0; i < hasBytes.Length; i++)
+                {
+                    builder.Append(hasBytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
         }
     }
 }
