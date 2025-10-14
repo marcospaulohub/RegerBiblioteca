@@ -10,7 +10,7 @@ namespace RegerBiblioteca.Core.ValueObjects
         private static readonly Regex EmailRegex =
             new(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.Compiled);
 
-        public Email(string address)
+        private Email(string address)
         {
             if (string.IsNullOrWhiteSpace(address))
                 throw new ArgumentException("E-mail não pode ser vazio.", nameof(address));
@@ -21,6 +21,10 @@ namespace RegerBiblioteca.Core.ValueObjects
             Address = address.Trim().ToLowerInvariant(); // Normalização
         }
 
+        public static Email Criar(string email)
+        {
+            return new Email(email);
+        }
         protected override IEnumerable<object?> GetEqualityComponents()
         {
             yield return Address;
