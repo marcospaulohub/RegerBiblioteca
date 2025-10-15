@@ -1,6 +1,7 @@
 ﻿using RegerBiblioteca.Core.Entities;
 using RegerBiblioteca.Core.Repositories;
 using RegerBiblioteca.Core.Services;
+using RegerBiblioteca.Core.ValueObjects;
 using RegerBiblioteca.Core.ViewModels;
 using RegerBiblioteca.Core.ViewModels.Usuarios;
 
@@ -20,8 +21,8 @@ namespace RegerBiblioteca.App.Services
             var usuario = new Usuario
             {
                 Nome = model.Nome,
-                Email = model.Email,
-                Senha = model.Senha,
+                Email = Email.Criar(model.Email),
+                Senha = Senha.Criar(model.Senha),
                 TipoUsuario = model.TipoUsuario
             };
 
@@ -81,6 +82,24 @@ namespace RegerBiblioteca.App.Services
                 .ToList();
 
             return ResultViewModel<List<UsuarioViewModel?>>.Success(lista);
+        }
+
+        public ResultViewModel AlteraSenha(AlteraSenhaInputModel model)
+        {
+            var usuario = _usuarioRepository.GetByEmail(model.Email);
+
+            if (usuario is null)
+                return ResultViewModel.Error("Usuário não encontrado.");
+
+            //Verifica se a senha atual está correta
+            if (!usuario.Senha.Verificar(model.SenhaAtual))
+                return ResultViewModel.Error("Senha atual incorreta.");
+
+            usuario.Senha = Senha.Criar(model.NovaSenha);
+
+            _usuarioRepository.Update(usuario);
+
+            return ResultViewModel.Success();
         }
     }
 }

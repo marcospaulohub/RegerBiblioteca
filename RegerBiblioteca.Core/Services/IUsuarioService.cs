@@ -10,5 +10,6 @@ namespace RegerBiblioteca.Core.Services
         ResultViewModel Delete(int id);
         ResultViewModel<UsuarioViewModel?> GetById(int id);
         ResultViewModel<List<UsuarioViewModel?>> GetAll();
+        ResultViewModel AlteraSenha(AlteraSenhaInputModel model);
     }
 }
