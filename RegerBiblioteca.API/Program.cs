@@ -10,6 +10,17 @@ namespace RegerBiblioteca.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // 1. Adiciona CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowLocalhost", policy =>
+                    policy
+                        //.WithOrigins("http://localhost:5500") // Porta do Live Server
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
             // registra o converter
             builder.Services.Configure<JsonOptions>(options =>
             {
@@ -28,6 +39,9 @@ namespace RegerBiblioteca.API
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            // 2. Usa o CORS
+            app.UseCors("AllowLocalhost");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
