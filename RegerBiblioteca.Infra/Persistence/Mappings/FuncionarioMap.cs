@@ -24,14 +24,14 @@ namespace RegerBiblioteca.Infra.Persistence.Mappings
                 .Property(f => f.Email)
                 .HasConversion(
                     v => v.ToString(),
-                    v => new Email(v))
+                    v => Email.Criar(v))
                 .IsRequired()
                 .HasColumnType("varchar(100)");
 
             builder
                 .Property(f => f.Senha)
                 .HasConversion(
-                    v => v.ToString(),
+                    v => Senha.ComputeHash(v.Valor),
                     v => Senha.Criar(v))
                 .IsRequired()
                 .HasColumnType("varchar(max)");
