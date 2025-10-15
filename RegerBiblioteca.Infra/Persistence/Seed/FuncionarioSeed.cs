@@ -9,7 +9,7 @@ namespace RegerBiblioteca.Infra.Persistence.Seed
         public static void SeedFuncionarios(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Funcionario>().HasData(
-                new Funcionario { Id = 1, Nome = "Admin", Email = new Email("admin@exemplo.com"), Senha = Senha.Criar("senha123"), Cargo = "Administrador", Matricula = "12345", DataAdmissao = new DateTime(2020, 1, 1) }
+                new Funcionario { Id = 1, Nome = "Admin", Email = Email.Criar("admin@exemplo.com"), Senha = Senha.Criar("senha123"), Cargo = "Administrador", Matricula = "12345", DataAdmissao = new DateTime(2020, 1, 1) }
                 );
         }
     }
