@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RegerBiblioteca.Core.Services;
+using RegerBiblioteca.Core.ValueObjects;
 using RegerBiblioteca.Core.ViewModels.Usuarios;
 
 namespace RegerBiblioteca.API.Controllers
@@ -59,6 +60,17 @@ namespace RegerBiblioteca.API.Controllers
         public IActionResult GetAll()
         {
             var result = _usuarioService.GetAll();
+
+            return Ok(result);
+        }
+
+        [HttpPost("recupera/altera-senha")]
+        public IActionResult AlteraSenha(AlteraSenhaInputModel model)
+        {
+            var result = _usuarioService.AlteraSenha(model);
+
+            if (!result.IsSuccess)
+                return NotFound(result);
 
             return Ok(result);
         }
