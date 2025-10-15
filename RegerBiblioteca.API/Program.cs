@@ -1,5 +1,7 @@
-using RegerBiblioteca.Infra;
+using Microsoft.AspNetCore.Http.Json;
+using RegerBiblioteca.API.Converters;
 using RegerBiblioteca.App;
+using RegerBiblioteca.Infra;
 namespace RegerBiblioteca.API
 {
     public class Program
@@ -7,6 +9,13 @@ namespace RegerBiblioteca.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // registra o converter
+            builder.Services.Configure<JsonOptions>(options =>
+            {
+                options.SerializerOptions.Converters.Add(new SenhaJsonConverter());
+            });
+
 
             // Add services to the container.
             builder.Services
