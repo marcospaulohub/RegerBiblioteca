@@ -6,14 +6,16 @@ namespace RegerBiblioteca.Core.ViewModels.Usuarios
 {
     public class UsuarioViewModel
     {
-        public UsuarioViewModel(string nome, Email email, Senha senha, TipoUsuario tipoUsuario)
+        public UsuarioViewModel(int id, string nome, Email email, Senha senha, TipoUsuario tipoUsuario)
         {
+            Id = id;
             Nome = nome;
             Email = email.ToString();
             Senha = senha.ToString();
             TipoUsuario = tipoUsuario;
         }
 
+        public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
@@ -22,6 +24,7 @@ namespace RegerBiblioteca.Core.ViewModels.Usuarios
         public static UsuarioViewModel FromEntity(Usuario usuario)
         {
             return new UsuarioViewModel(
+                usuario.Id,
                 usuario.Nome,
                 usuario.Email,
                 usuario.Senha,
