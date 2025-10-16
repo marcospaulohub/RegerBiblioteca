@@ -43,8 +43,8 @@ namespace RegerBiblioteca.App.Services
                 return ResultViewModel.Error("Usuário não encontrado.");
 
             usuario.Nome = model.Nome;
-            usuario.Email = model.Email;
-            usuario.Senha = model.Senha;
+            usuario.Email = Email.Criar(model.Email);
+            usuario.Senha = Senha.Criar(model.Senha);
             usuario.TipoUsuario = model.TipoUsuario;
             
             _usuarioRepository.Update(usuario);
