@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "5891cb98-f64f-42cc-998d-741737ca289b",
+		"name": "RegerBiblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2957976"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7237/api/usuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7237/api/usuario/1004",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"usuario",
+								"1004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Marcos Paulo\",\r\n  \"email\": \"marcospaulo@email.com\",\r\n  \"senha\": \"12\",\r\n  \"tipoUsuario\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7237/api/usuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AlteraSenha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"marcospaulo@email.com\",\r\n  \"senhaAtual\": \"abcdefgh\",\r\n  \"novaSenha\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7237/api/usuario/recupera/altera-senha",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"usuario",
+								"recupera",
+								"altera-senha"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7237/api/usuario/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Rebeca Costa2\",\r\n  \"email\": \"rebeca@gmail.com\",\r\n  \"senha\": \"12345678\",\r\n  \"tipoUsuario\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7237/api/usuario/2002",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"usuario",
+								"2002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
