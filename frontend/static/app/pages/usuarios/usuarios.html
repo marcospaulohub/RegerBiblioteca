@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciar Usuários</title>
+  <link rel="stylesheet" href="usuarios.css" />
+</head>
+<body>
+  <header>
+    <h1>Gerenciar Usuários</h1>
+  </header>
+
+  <main>
+    <!-- Botão Novo Usuário -->
+    <div class="toolbar">
+      <button id="btnNovoUsuario">+ Novo Usuário</button>
+    </div>
+
+    <!-- Formulário de Usuário -->
+    <section id="formContainer" class="card" style="display: none;">
+      <h2 id="formTitle">Novo Usuário</h2>
+      <form id="usuarioForm">
+        <input type="hidden" id="usuarioId" />
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <div id="senhaContainer">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" required />
+        </div>
+
+        <label for="tipoUsuario">Tipo de Usuário:</label>
+        <select id="tipoUsuario" required>
+          <option value="">Selecione</option>
+          <option value="1">Aluno</option>
+          <option value="2">Professor</option>
+          <option value="3">Funcionário</option>
+          <option value="4">Administrador</option>
+          <option value="5">Visitante</option>
+        </select>
+
+        <div class="form-buttons">
+          <button type="submit" id="btnSalvar">Salvar</button>
+          <button type="button" id="btnCancelar">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Listagem de Usuários -->
+    <section id="listaContainer" class="card">
+      <h2>Lista de Usuários</h2>
+      <table id="tabelaUsuarios">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Tipo</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="usuariosBody">
+          <!-- Linhas geradas dinamicamente -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="usuarios.js"></script>
+</body>
+</html>

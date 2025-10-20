@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Principal</title>
+  <link rel="stylesheet" href="assets/main.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Menu lateral -->
+    <aside class="sidebar">
+      <h2>Meu Painel</h2>
+      <nav>
+        <ul>
+          <li><a href="#" data-page="dashboard/dashboard.html">Dashboard</a></li>
+          <li><a href="#" data-page="usuarios/usuarios.html">Usuários</a></li>
+          <li><a href="#" data-page="relatorios/relatorios.html">Relatórios</a></li>
+          <li><a href="#" data-page="configuracoes/configuracoes.html">Configurações</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo dinâmico -->
+    <main class="content">
+      <iframe id="pageFrame" src="pages/dashboard/dashboard.html" frameborder="0"></iframe>
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
