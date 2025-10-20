@@ -44,7 +44,6 @@ namespace RegerBiblioteca.App.Services
 
             usuario.Nome = model.Nome;
             usuario.Email = Email.Criar(model.Email);
-            usuario.Senha = Senha.Criar(model.Senha);
             usuario.TipoUsuario = model.TipoUsuario;
             
             _usuarioRepository.Update(usuario);
