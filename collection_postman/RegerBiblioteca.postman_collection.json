@@ -254,7 +254,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7237/api/categoria",
+							"raw": "https://localhost:7237/api/categoria/3",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -262,7 +262,8 @@
 							"port": "7237",
 							"path": [
 								"api",
-								"categoria"
+								"categoria",
+								"3"
 							]
 						}
 					},
@@ -284,6 +285,103 @@
 								"api",
 								"categoria",
 								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7237/api/autor",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"autor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7237/api/autor/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"autor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"string\",\r\n  \"nacionalidade\": \"string\",\r\n  \"dataNascimento\": \"2025-10-22T15:55:55.081Z\",\r\n  \"dataFalecimento\": \"2025-10-22T15:55:55.081Z\",\r\n  \"biografia\": \"string\",\r\n  \"fotoUrl\": \"string\",\r\n  \"siteUrl\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7237/api/autor/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"autor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7237/api/autor/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7237",
+							"path": [
+								"api",
+								"autor",
+								"1"
 							]
 						}
 					},
