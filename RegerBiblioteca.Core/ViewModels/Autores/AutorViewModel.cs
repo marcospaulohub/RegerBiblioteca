@@ -4,8 +4,9 @@ namespace RegerBiblioteca.Core.ViewModels.Autores
 {
     public class AutorViewModel
     {
-        public AutorViewModel(string nome, string? nacionalidade, DateTime? dataNascimento, DateTime? dataFalecimento, string? biografia, string? fotoUrl, string? siteUrl)
+        public AutorViewModel(int id, string nome, string? nacionalidade, DateTime? dataNascimento, DateTime? dataFalecimento, string? biografia, string? fotoUrl, string? siteUrl)
         {
+            Id = id;
             Nome = nome;
             Nacionalidade = nacionalidade;
             DataNascimento = dataNascimento;
@@ -15,6 +16,7 @@ namespace RegerBiblioteca.Core.ViewModels.Autores
             SiteUrl = siteUrl;
         }
 
+        public int Id { get; set; }
         public string Nome { get; set; }
         public string? Nacionalidade { get; set; }
         public DateTime? DataNascimento { get; set; }
@@ -25,6 +27,7 @@ namespace RegerBiblioteca.Core.ViewModels.Autores
 
         public static AutorViewModel FromEntity(Autor autor)
             => new(
+                autor.Id,
                 autor.Nome,
                 autor.Nacionalidade,
                 autor.DataNascimento,
